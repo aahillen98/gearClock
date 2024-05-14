@@ -1,0 +1,219 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #00000c;
+    font-family: "Playfair Display", serif;
+}
+.container{
+    width: 100%;
+    height: 600px;
+    width: 600px;
+    border-radius: 300px;
+    border: #f8eba7 groove 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #f8eba7 0 0 10px;
+    background-color: #00000c;
+    background-image: repeating-conic-gradient( #f8eba7 0deg 0deg, transparent 0.5deg 6deg, #c97400 6deg 6deg);
+}
+.perimeter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background-color: #00000c;
+}
+.hands {
+    background-image: linear-gradient(#f8eba7 50%, transparent 0);
+    position: absolute;
+    z-index: 3;
+}
+#hour {
+    height: 250px;
+    width: 8px;
+    transition: 1000ms;
+}
+#second {
+    height: 500px;
+    width: 4px;
+}
+#minute {
+    height: 400px;
+    width: 6px;
+    transition: 1000ms;
+}
+.center {
+    position: absolute;
+    background-color: #00000c;
+    border: #f8eba7 groove 1px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    z-index: 4;
+}
+.numbers {
+    height: 380px;
+    width: 380px;
+    position: absolute;
+    color: #f8eba7;
+    background-color: #00000c;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+.hrs {
+    position: absolute;
+    height: 550px;
+    width: 60px;
+}
+.hrs span {
+    position: absolute;
+    height: 60px;
+    width: inherit;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gears {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-conic-gradient(#f7eba7 0deg 0deg, transparent 0.5deg 6deg);
+    z-index: 2;
+}
+.gear {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-conic-gradient(#f7eba7 0deg 5deg, transparent 5deg 15deg);
+    border-radius: 50%;
+}
+.g1 {
+    height: 120px;
+    width: 120px;
+    bottom: 60px;
+    left: 130px;
+}
+.g2 {
+    height: 60px;
+    width: 60px;
+    top: 220px;
+    left: 80px;
+}
+.g3 {
+    height: 120px;
+    width: 120px;
+    top: 100px;
+    left: 60px;
+}
+.g4 {
+    height: 40px;
+    width: 40px;
+    top: 60px;
+    left: 120px;
+}
+.g5 {
+    height: 80px;
+    width: 80px;
+    top: 40px;
+}
+.g6 {
+    height: 40px;
+    width: 40px;
+    top: 60px;
+}
+.g7 {
+    height: 200px;
+    width: 200px;
+}
+.g8 {
+    height: 160px;
+    width: 160px;
+    right: 80px;
+    bottom: 80px;
+}
+.g9 {
+    height: 40px;
+    width: 40px;
+    right: 140px;
+    bottom: 140px;
+}
+.g10 {
+    height: 80px;
+    width: 80px;
+}
+.gearCover {
+    background-color: #00000c;
+    border: #f8eba7 outset 2px;
+    height: 95%;
+    width: 95%;
+    border-radius: 50%;
+}
+.gearCntr {
+    position:absolute;
+    background-color: #00000c;
+    height: 380px;
+    width: 380px;
+    border-radius: 50%;
+}
+.gearMid {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: #413f42 outset 1px;
+}
+
+
+.clockwise {
+    animation-name: clockwise;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.counterClockwise {
+    animation-name: counterClockwise;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes counterClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
